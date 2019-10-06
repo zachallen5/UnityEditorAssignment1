@@ -9,6 +9,7 @@ public class Factory : MonoBehaviour
     public GameObject tree;
     public GameObject flower;
     public GameObject rock;
+    public GameObject grass;
     public Transform newPosition;
     public Camera camera;
     private bool isCarrying = false;
@@ -31,7 +32,7 @@ public class Factory : MonoBehaviour
 
    
             objectSpawner(objecttobeSpawned);
-            Debug.Log(objecttobeSpawned);
+           // Debug.Log(objecttobeSpawned);
             
         }
 
@@ -49,6 +50,8 @@ public class Factory : MonoBehaviour
         
 
     }
+
+ 
 
     public void rockspawn()
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawnRock : MonoBehaviour
+public class flower : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

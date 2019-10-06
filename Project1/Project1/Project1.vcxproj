@@ -119,13 +119,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="FileManager.h" />
     <ClInclude Include="PluginSettings.h" />
     <ClInclude Include="SimpleClass.h" />
     <ClInclude Include="Wrapper.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FileManager.cpp" />
     <ClCompile Include="SimpleClass.cpp" />
     <ClCompile Include="Wrapper.cpp" />
   </ItemGroup>

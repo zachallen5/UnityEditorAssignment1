@@ -1,22 +1,35 @@
 #include "Wrapper.h"
-
 SimpleClass simpleClass;
-FileManager fileManager;
-
 int SimpleFunction()
 {
 	return simpleClass.SimpleFunction();
 }
-
-/*PLUGIN_API void savePosX(char * filePath)
+int aTest()
 {
-	return fileManager.savePosX(char * (filePath));
+	return simpleClass.aTest();
 }
 
-int posPrint();
+void ReadInto(float objectNumber, float x, float y, float z)
 {
-	return fileManager.blockPosX();
-
-
+	simpleClass.ReadInto(objectNumber, x, y, z);
 }
-*/
+
+float ReadOut(int j)
+{
+	return simpleClass.ReadOut(j);
+}
+
+void startWriting()
+{
+	simpleClass.startWriting();
+}
+
+void endWriting()
+{
+	simpleClass.endWriting();
+}
+
+int returnLines()
+{
+	return simpleClass.returnLines();
+}
