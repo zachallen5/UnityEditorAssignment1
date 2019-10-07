@@ -67,6 +67,8 @@ public class Factory : MonoBehaviour
 
 
 
+
+
     public void objectSpawner(GameObject gameobject)
     {
         if (Input.GetMouseButtonDown(0))

@@ -12,6 +12,10 @@ public class Project1 : MonoBehaviour
     public GameObject flower;
     public GameObject rock;
     public GameObject tree;
+    public GameObject bush;
+    public GameObject grass;
+    public GameObject house;
+
     public bool finishedLoading = false;
 
     const string DLL_NAME = "Project1";
