@@ -9,6 +9,7 @@ public class playerMovement : MonoBehaviour
     public float moveSpeed;
     private Vector3 movement;
     private Rigidbody rigidbody;
+    public GameObject camera;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,38 +19,39 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 velocity;
+        //if (camera.activeSelf)
+        //{
+        //    Cursor.lockState = CursorLockMode.Locked;
+        //    Cursor.visible = false;
+        //}
+        //else
+        //{
+        //    Cursor.lockState = CursorLockMode.None;
+        //    Cursor.visible = true;
 
+        //}
         //MOVEMENT
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             vertical = 1f;
             
-            //Vector3 playerPosition = transform.position;
-            //playerPosition.x += 0.1f;
-            //transform.position = playerPosition;
+
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             vertical = -1f;
-            //Vector3 playerPosition = transform.position;
-            //playerPosition.x -= 0.1f;
-            //transform.position = playerPosition;
+
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             horizontal = -1f;
-            //Vector3 playerPosition = transform.position;
-            //playerPosition.z += 0.1f;
-            //transform.position = playerPosition;
+
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             horizontal = 1f;
-            //Vector3 playerPosition = transform.position;
-            //playerPosition.z -= 0.1f;
-            //transform.position = playerPosition;
+
         }
 
 
