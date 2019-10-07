@@ -10,6 +10,7 @@ public class Factory : MonoBehaviour
     public GameObject flower;
     public GameObject rock;
     public GameObject grass;
+    public GameObject house;
     public Transform newPosition;
     public Camera camera;
     private bool isCarrying = false;
@@ -38,17 +39,12 @@ public class Factory : MonoBehaviour
 
         
     }
+    //Object spawn functions
 
     public void flowerSpawn()
     {
-
-
         objecttobeSpawned = flower;
-        
-        
         isCarrying = true;
-        
-
     }
 
  
@@ -65,9 +61,20 @@ public class Factory : MonoBehaviour
         isCarrying = true;
     }
 
+    public void grassSpawn()
+    {
+        objecttobeSpawned = grass;
+        isCarrying = true;
+    }
+    public void houseSpawn()
+    {
+        objecttobeSpawned = house;
+        isCarrying = true;
+    }
 
 
 
+    //Object spawner function
 
     public void objectSpawner(GameObject gameobject)
     {
@@ -80,7 +87,7 @@ public class Factory : MonoBehaviour
             RaycastHit hit;
 
 
-
+            //Object Instantiate
 
             if (Physics.Raycast(raycast, out hit, Mathf.Infinity))
             {

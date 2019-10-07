@@ -12,7 +12,6 @@ public class Project1 : MonoBehaviour
     public GameObject flower;
     public GameObject rock;
     public GameObject tree;
-    public GameObject bush;
     public GameObject grass;
     public GameObject house;
 
@@ -56,28 +55,22 @@ public class Project1 : MonoBehaviour
             {
                 Destroy(spawnables[i]);
             }
-
-
-
+            
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
 
         }
 
 
 
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.L))
         {
-            //  Debug.Log(SimpleFunction());
+            
             finishedLoading = true;
             loadObjects();
             
         }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-
-        }
+       
 
     }
     public void saveMap()
@@ -105,6 +98,18 @@ public class Project1 : MonoBehaviour
                 {
 
                     objectNumber = 2;
+
+                }
+                else if (spawnables[i].gameObject.name.Substring(0, spawnables[i].gameObject.name.Length - 7).ToLower() == "grass")
+                {
+
+                    objectNumber = 3;
+
+                }
+                else if (spawnables[i].gameObject.name.Substring(0, spawnables[i].gameObject.name.Length - 7).ToLower() == "house")
+                {
+
+                    objectNumber = 4;
 
                 }
                 ReadInto(objectNumber, spawnables[i].transform.position.x, spawnables[i].transform.position.y, spawnables[i].transform.position.z);
@@ -136,7 +141,6 @@ public class Project1 : MonoBehaviour
         {
             while (finishedLoading)
             {
-                Debug.Log("hello");
                 for (int i = 0; i <= (returnLines() / 4); i++)
                 {
                     Debug.Log(returnLines() / 4);
@@ -151,6 +155,15 @@ public class Project1 : MonoBehaviour
                     else if (ReadOut(0 + objectSet) == 2)
                     {
                         Instantiate(tree, new Vector3(ReadOut(1 + objectSet), ReadOut(2 + objectSet), ReadOut(3 + objectSet)), Quaternion.identity);
+                    }
+                    else if (ReadOut(0 + objectSet) == 3)
+                    {
+                        Instantiate(grass, new Vector3(ReadOut(1 + objectSet), ReadOut(2 + objectSet), ReadOut(3 + objectSet)), Quaternion.identity);
+                    }
+                    else if (ReadOut(0 + objectSet) == 4)
+                    {
+                        Debug.Log(objectSet);
+                        Instantiate(house, new Vector3(ReadOut(1 + objectSet), ReadOut(2 + objectSet), ReadOut(3 + objectSet)), Quaternion.identity);
                     }
                     objectSet = objectSet + 4;
                     if(objectSet == returnLines())
